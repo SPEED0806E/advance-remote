@@ -368,6 +368,49 @@
     <div class="brand-logo">Onida</div>
 
   </div>
+  <script>
+    //Power
+
+    document.querySelector(".btn-power").onclick = function() {
+        alert("Power button pressed");
+    };
+
+    document.querySelector(".btn-mute").onclick = function() {
+        alert("Mure button pressed");
+    };
+
+    // Number buttons
+
+    document.querySelectorAll(".btn-num").forEach(function(button) {
+        button.onclick = function() {
+            alert("Pressed: " + button.innerText);
+        };
+    });
+
+    // Volume buttons
+
+    const volumeButtons = document.querySelectorAll(".rocker-track")[0]
+    .querySelectorAll(".rocker-btn");
+    volumeButtons[0].onclick = function() {
+        alert("Volume up");
+    };
+    volumeButtons[1].onclick = function() {
+        alert("Volume down");
+    };
+
+    // Channel buttons
+
+    const channelButtons = document.querySelectorAll(".rocker-track")[1]
+    .querySelectorAll(".rocker-btn");
+    channelButtons[0].onclick = function() {
+        alert("Channel up");
+    };
+    channelButtons[1].onclick = function() {
+        alert("Channel down");
+    };
+        
+    
+  </script>
 
 </body>
 </html>
